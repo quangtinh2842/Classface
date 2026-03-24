@@ -46,4 +46,7 @@ struct CFClassAndStudent: CFBase {
     
     return (.Valid, nil)
   }
+  
+  var cfClass: CFClass!
+  var cfStudent: CFStudent!
 }

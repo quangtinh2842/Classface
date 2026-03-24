@@ -36,28 +36,28 @@ struct ClassfaceApp: App {
         .onAppear {
           if UserDefaultsHelper.wasRememberMeTicked() {
             GIDSignIn.sharedInstance.restorePreviousSignIn { resultUser, error in
-              if let resultUser {
+              if error != nil {
+                return
+              }
+              
+              if resultUser != nil {
                 showToast = true
-                CFUser.find(byId: CFUser.currentUserFromAuth!.uid!) { result, error in
+                processAfterSignIn { error2 in
                   showToast = false
                   
-                  if error == nil {
-                    let syncedUser = result as! CFUser
-                    CFUser.currentUserFromDb = syncedUser
+                  if error2 != nil {
+                  } else {
                     self.user = CFUser.currentUserFromAuth
                   }
                 }
-              } else {
-                if let currentUser = Auth.auth().currentUser {
-                  showToast = true
-                  CFUser.find(byId: CFUser.currentUserFromAuth!.uid!) { result, error in
-                    showToast = false
-                    
-                    if error == nil {
-                      let syncedUser = result as! CFUser
-                      CFUser.currentUserFromDb = syncedUser
-                      self.user = CFUser.currentUserFromAuth
-                    }
+              } else if Auth.auth().currentUser != nil {
+                showToast = true
+                processAfterSignIn { error2 in
+                  showToast = false
+                  
+                  if error2 != nil {
+                  } else {
+                    self.user = CFUser.currentUserFromAuth
                   }
                 }
               }

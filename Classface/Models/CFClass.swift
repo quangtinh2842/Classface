@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 struct CFClass: CFBase {
   var cid: String?
   var className: String?
   var rollCallerId: String?
+  var backgroundURL: String?
+  var lecturerName: String?
   
   static func collectionName() -> String {
     return "classes"
@@ -41,10 +44,20 @@ struct CFClass: CFBase {
       return (.InvalidId, "cid, rollCallerId")
     }
     
-    if self.className == nil || self.className!.isEmpty {
-      return (.InvalidBlankAttribute, "className")
+    if self.className == nil || self.className!.isEmpty ||
+        self.backgroundURL == nil || self.backgroundURL!.isEmpty ||
+        self.lecturerName == nil || self.lecturerName!.isEmpty {
+      return (.InvalidBlankAttribute, "className, backgroundURL, lecturerName")
     }
     
     return (.Valid, nil)
+  }
+  
+  static func deleteWithId(_ id: String, completion handler: @escaping (Error?) -> Void) {
+    let ref = Database.database().reference().child(CFClass.collectionName()).child(id)
+    
+    ref.removeValue { error, _ in
+      handler(error)
+    }
   }
 }

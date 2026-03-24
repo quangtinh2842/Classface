@@ -73,7 +73,7 @@ struct CFNotification: CFBase {
       let notificationIds = notificationAndUserJunctionRecords.map { $0.getNid() }
       
       if notificationIds.isEmpty {
-        handler([], [], NotFoundError)
+        handler([], [], nil)
         return
       }
       
@@ -109,5 +109,15 @@ struct CFNotification: CFBase {
     } else {
       return self.nid! + "_" + CFUser.currentUserFromAuth!.uid!
     }
+  }
+  
+  func junctionId() -> String? {
+    for junc in CFNotificationAndUser.junctionRecordsOfCurrentUser! {
+      if junc.getNid() == self.nid {
+        return junc.id
+      }
+    }
+    
+    return nil
   }
 }

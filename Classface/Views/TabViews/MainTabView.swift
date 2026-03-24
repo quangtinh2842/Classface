@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
+  @StateObject private var _observer = MainTabViewObserver.shared
+  
   @Binding var user: CFUser?
   
   var body: some View {
@@ -16,10 +18,15 @@ struct MainTabView: View {
         .tabItem {
           Label("", systemImage: "house.fill")
         }
+      StudentsView()
+        .tabItem {
+          Label("", systemImage: "person.2.fill")
+        }
       NotificationsView()
         .tabItem {
           Label("", systemImage: "bell.fill")
         }
+        .badge(_observer.nUnreadNotifications())
       SettingsView(user: self.$user)
         .tabItem {
           Label("", systemImage: "gearshape.fill")

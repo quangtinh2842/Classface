@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 struct CFNotificationAndUser: CFBase {
   static var junctionRecordsOfCurrentUser: [CFNotificationAndUser]?
@@ -52,5 +53,23 @@ struct CFNotificationAndUser: CFBase {
   
   func getNid() -> String {
     return self.id!.components(separatedBy: "_").first!
+  }
+  
+  func save(completion handler: UpdateValueHandler?) throws -> String {
+    var record = [String: AnyObject]()
+    record[CFUser.currentUserFromAuth!.uid!] = true as AnyObject
+    record[self.getNid()] = true as AnyObject
+    record["id"] = self.id! as AnyObject
+    record["wasRead"] = self.wasRead as AnyObject
+    
+    let updatesManifest = ["/\(CFNotificationAndUser.collectionName())/\(self.id!)": record]
+    let dbRef = Database.database().reference()
+    dbRef.updateChildValues(updatesManifest)
+    
+    if handler != nil {
+      handler!(nil, dbRef)
+    }
+    
+    return self.id!
   }
 }
