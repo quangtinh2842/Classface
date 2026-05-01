@@ -1,0 +1,881 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C25711499C2086EC0C9B1F81 /* Pods_Classface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BABD6E9BEEB0B926D95A71 /* Pods_Classface.framework */; };
+		FA5F0AE62F9FC07600D3E622 /* KRProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = FA5F0AE52F9FC07600D3E622 /* KRProgressHUD */; };
+		FA5F0AE92F9FC60B00D3E622 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = FA5F0AE82F9FC60B00D3E622 /* AlertToast */; };
+		FAB0D9B72F9F462F0091970A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0D9B62F9F462F0091970A /* Assets.xcassets */; };
+		FAB0D9BA2F9F462F0091970A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0D9B92F9F462F0091970A /* Preview Assets.xcassets */; };
+		FAB0D9C32F9F479C0091970A /* modelFacenet.pb in Resources */ = {isa = PBXBuildFile; fileRef = FAB0D9C22F9F479C0091970A /* modelFacenet.pb */; };
+		FAB0D9CA2F9F47B00091970A /* tfWrap.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9C52F9F47AC0091970A /* tfWrap.mm */; };
+		FAB0D9CB2F9F47B00091970A /* FaceNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9C82F9F47AF0091970A /* FaceNet.swift */; };
+		FAB0D9CC2F9F47B00091970A /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9C92F9F47B00091970A /* tensorflow_utils.mm */; };
+		FAB0D9D22F9F48CB0091970A /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9D12F9F48CB0091970A /* CIImage+.swift */; };
+		FAB0D9D42F9F48E80091970A /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9D32F9F48E80091970A /* UIImage+.swift */; };
+		FAB0D9D62F9F49AC0091970A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB0D9D52F9F49AC0091970A /* GoogleService-Info.plist */; };
+		FAB0D9E02F9F49CF0091970A /* CFClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9D82F9F49CA0091970A /* CFClass.swift */; };
+		FAB0D9E12F9F49CF0091970A /* CFNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9D92F9F49CB0091970A /* CFNotification.swift */; };
+		FAB0D9E22F9F49CF0091970A /* CFNotificationAndUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9DA2F9F49CB0091970A /* CFNotificationAndUser.swift */; };
+		FAB0D9E32F9F49CF0091970A /* CFClassAndStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9DB2F9F49CC0091970A /* CFClassAndStudent.swift */; };
+		FAB0D9E42F9F49CF0091970A /* CFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9DC2F9F49CD0091970A /* CFUser.swift */; };
+		FAB0D9E52F9F49CF0091970A /* CFStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9DD2F9F49CE0091970A /* CFStudent.swift */; };
+		FAB0D9E62F9F49CF0091970A /* CFRollCallPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9DE2F9F49CE0091970A /* CFRollCallPhoto.swift */; };
+		FAB0D9E72F9F49CF0091970A /* CFRollCallSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9DF2F9F49CF0091970A /* CFRollCallSession.swift */; };
+		FAB0D9EA2F9F49DD0091970A /* CFBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9E92F9F49DD0091970A /* CFBase.swift */; };
+		FAB0D9F52F9F4A010091970A /* EditStudentViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9EB2F9F49FA0091970A /* EditStudentViewObserver.swift */; };
+		FAB0D9F62F9F4A010091970A /* LogInViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9EC2F9F49FB0091970A /* LogInViewObserver.swift */; };
+		FAB0D9F72F9F4A010091970A /* EditClassViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9ED2F9F49FC0091970A /* EditClassViewObserver.swift */; };
+		FAB0D9F82F9F4A010091970A /* HomeViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9EE2F9F49FD0091970A /* HomeViewObserver.swift */; };
+		FAB0D9F92F9F4A010091970A /* RollCallSessionViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9EF2F9F49FD0091970A /* RollCallSessionViewObserver.swift */; };
+		FAB0D9FA2F9F4A010091970A /* ProfileViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9F02F9F49FE0091970A /* ProfileViewObserver.swift */; };
+		FAB0D9FB2F9F4A010091970A /* SignUpViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9F12F9F49FF0091970A /* SignUpViewObserver.swift */; };
+		FAB0D9FC2F9F4A010091970A /* StudentsViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9F22F9F49FF0091970A /* StudentsViewObserver.swift */; };
+		FAB0D9FD2F9F4A010091970A /* NotificationsViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9F32F9F4A000091970A /* NotificationsViewObserver.swift */; };
+		FAB0D9FE2F9F4A010091970A /* MainTabViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0D9F42F9F4A010091970A /* MainTabViewObserver.swift */; };
+		FAB0DA072F9F4A140091970A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA002F9F4A100091970A /* Common.swift */; };
+		FAB0DA082F9F4A140091970A /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA012F9F4A110091970A /* UserDefaultsHelper.swift */; };
+		FAB0DA092F9F4A140091970A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA022F9F4A120091970A /* NetworkMonitor.swift */; };
+		FAB0DA0A2F9F4A140091970A /* CFFaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA032F9F4A120091970A /* CFFaceDetector.swift */; };
+		FAB0DA0B2F9F4A140091970A /* FaceComparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA042F9F4A130091970A /* FaceComparator.swift */; };
+		FAB0DA0C2F9F4A140091970A /* ResourcesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA052F9F4A140091970A /* ResourcesStore.swift */; };
+		FAB0DA142F9F4A5B0091970A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA102F9F4A590091970A /* LogInView.swift */; };
+		FAB0DA152F9F4A5B0091970A /* ForgotPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA112F9F4A5A0091970A /* ForgotPassView.swift */; };
+		FAB0DA162F9F4A5B0091970A /* MainEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA122F9F4A5B0091970A /* MainEntryView.swift */; };
+		FAB0DA172F9F4A5B0091970A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA132F9F4A5B0091970A /* SignUpView.swift */; };
+		FAB0DA1A2F9F4A660091970A /* CrashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA182F9F4A650091970A /* CrashView.swift */; };
+		FAB0DA1B2F9F4A660091970A /* TOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA192F9F4A660091970A /* TOSView.swift */; };
+		FAB0DA242F9F4A950091970A /* RollCallSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA1F2F9F4A920091970A /* RollCallSessionView.swift */; };
+		FAB0DA252F9F4A950091970A /* RollCallSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA202F9F4A930091970A /* RollCallSessionsView.swift */; };
+		FAB0DA262F9F4A950091970A /* EditClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA212F9F4A930091970A /* EditClassView.swift */; };
+		FAB0DA272F9F4A950091970A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA222F9F4A940091970A /* HomeView.swift */; };
+		FAB0DA282F9F4A950091970A /* StudentsOfClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA232F9F4A950091970A /* StudentsOfClassView.swift */; };
+		FAB0DA2C2F9F4AA20091970A /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA292F9F4AA00091970A /* NotificationsView.swift */; };
+		FAB0DA2D2F9F4AA20091970A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA2A2F9F4AA10091970A /* MainTabView.swift */; };
+		FAB0DA2E2F9F4AA20091970A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA2B2F9F4AA20091970A /* ProfileView.swift */; };
+		FAB0DA312F9F4AA90091970A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA2F2F9F4AA80091970A /* SettingsView.swift */; };
+		FAB0DA322F9F4AA90091970A /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA302F9F4AA90091970A /* ResourcesView.swift */; };
+		FAB0DA352F9F4AB20091970A /* EditStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA332F9F4AB20091970A /* EditStudentView.swift */; };
+		FAB0DA362F9F4AB20091970A /* StudentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA342F9F4AB20091970A /* StudentsView.swift */; };
+		FAB0DA392F9F4B6C0091970A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FAB0DA382F9F4B6C0091970A /* FirebaseAuth */; };
+		FAB0DA3B2F9F4B6C0091970A /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAB0DA3A2F9F4B6C0091970A /* FirebaseDatabaseSwift */; };
+		FAB0DA3E2F9F4C140091970A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAB0DA3D2F9F4C140091970A /* GoogleSignInSwift */; };
+		FAB0DA442F9F4EA40091970A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FAB0DA432F9F4EA40091970A /* Kingfisher */; };
+		FAB0DA472F9F4F660091970A /* HUD in Frameworks */ = {isa = PBXBuildFile; productRef = FAB0DA462F9F4F660091970A /* HUD */; };
+		FAB0DA492F9F511F0091970A /* ClassfaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0DA482F9F511F0091970A /* ClassfaceApp.swift */; };
+		FAB0DA4C2F9F57BC0091970A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0DA4B2F9F57BC0091970A /* Launch Screen.storyboard */; };
+		FAB0DA552F9F656F0091970A /* Toaster in Frameworks */ = {isa = PBXBuildFile; productRef = FAB0DA542F9F656F0091970A /* Toaster */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77BABD6E9BEEB0B926D95A71 /* Pods_Classface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Classface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD5ECD3BC8473550B33A0DF /* Pods-Classface.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Classface.debug.xcconfig"; path = "Target Support Files/Pods-Classface/Pods-Classface.debug.xcconfig"; sourceTree = "<group>"; };
+		C1D166655533941E8CB55610 /* Pods-Classface.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Classface.release.xcconfig"; path = "Target Support Files/Pods-Classface/Pods-Classface.release.xcconfig"; sourceTree = "<group>"; };
+		FAB0D9AF2F9F462D0091970A /* Classface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Classface.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB0D9B62F9F462F0091970A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAB0D9B92F9F462F0091970A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAB0D9C22F9F479C0091970A /* modelFacenet.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = modelFacenet.pb; sourceTree = "<group>"; };
+		FAB0D9C42F9F47AB0091970A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		FAB0D9C52F9F47AC0091970A /* tfWrap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tfWrap.mm; sourceTree = "<group>"; };
+		FAB0D9C62F9F47AD0091970A /* tfWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tfWrap.h; sourceTree = "<group>"; };
+		FAB0D9C72F9F47AE0091970A /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
+		FAB0D9C82F9F47AF0091970A /* FaceNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceNet.swift; sourceTree = "<group>"; };
+		FAB0D9C92F9F47B00091970A /* tensorflow_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensorflow_utils.mm; sourceTree = "<group>"; };
+		FAB0D9D12F9F48CB0091970A /* CIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+.swift"; sourceTree = "<group>"; };
+		FAB0D9D32F9F48E80091970A /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		FAB0D9D52F9F49AC0091970A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAB0D9D82F9F49CA0091970A /* CFClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFClass.swift; sourceTree = "<group>"; };
+		FAB0D9D92F9F49CB0091970A /* CFNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFNotification.swift; sourceTree = "<group>"; };
+		FAB0D9DA2F9F49CB0091970A /* CFNotificationAndUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFNotificationAndUser.swift; sourceTree = "<group>"; };
+		FAB0D9DB2F9F49CC0091970A /* CFClassAndStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFClassAndStudent.swift; sourceTree = "<group>"; };
+		FAB0D9DC2F9F49CD0091970A /* CFUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFUser.swift; sourceTree = "<group>"; };
+		FAB0D9DD2F9F49CE0091970A /* CFStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFStudent.swift; sourceTree = "<group>"; };
+		FAB0D9DE2F9F49CE0091970A /* CFRollCallPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFRollCallPhoto.swift; sourceTree = "<group>"; };
+		FAB0D9DF2F9F49CF0091970A /* CFRollCallSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFRollCallSession.swift; sourceTree = "<group>"; };
+		FAB0D9E92F9F49DD0091970A /* CFBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFBase.swift; sourceTree = "<group>"; };
+		FAB0D9EB2F9F49FA0091970A /* EditStudentViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditStudentViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9EC2F9F49FB0091970A /* LogInViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9ED2F9F49FC0091970A /* EditClassViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditClassViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9EE2F9F49FD0091970A /* HomeViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9EF2F9F49FD0091970A /* RollCallSessionViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollCallSessionViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9F02F9F49FE0091970A /* ProfileViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9F12F9F49FF0091970A /* SignUpViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9F22F9F49FF0091970A /* StudentsViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9F32F9F4A000091970A /* NotificationsViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewObserver.swift; sourceTree = "<group>"; };
+		FAB0D9F42F9F4A010091970A /* MainTabViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewObserver.swift; sourceTree = "<group>"; };
+		FAB0DA002F9F4A100091970A /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FAB0DA012F9F4A110091970A /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		FAB0DA022F9F4A120091970A /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		FAB0DA032F9F4A120091970A /* CFFaceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFFaceDetector.swift; sourceTree = "<group>"; };
+		FAB0DA042F9F4A130091970A /* FaceComparator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceComparator.swift; sourceTree = "<group>"; };
+		FAB0DA052F9F4A140091970A /* ResourcesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesStore.swift; sourceTree = "<group>"; };
+		FAB0DA102F9F4A590091970A /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		FAB0DA112F9F4A5A0091970A /* ForgotPassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassView.swift; sourceTree = "<group>"; };
+		FAB0DA122F9F4A5B0091970A /* MainEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEntryView.swift; sourceTree = "<group>"; };
+		FAB0DA132F9F4A5B0091970A /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		FAB0DA182F9F4A650091970A /* CrashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashView.swift; sourceTree = "<group>"; };
+		FAB0DA192F9F4A660091970A /* TOSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOSView.swift; sourceTree = "<group>"; };
+		FAB0DA1F2F9F4A920091970A /* RollCallSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollCallSessionView.swift; sourceTree = "<group>"; };
+		FAB0DA202F9F4A930091970A /* RollCallSessionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollCallSessionsView.swift; sourceTree = "<group>"; };
+		FAB0DA212F9F4A930091970A /* EditClassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditClassView.swift; sourceTree = "<group>"; };
+		FAB0DA222F9F4A940091970A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FAB0DA232F9F4A950091970A /* StudentsOfClassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsOfClassView.swift; sourceTree = "<group>"; };
+		FAB0DA292F9F4AA00091970A /* NotificationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		FAB0DA2A2F9F4AA10091970A /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FAB0DA2B2F9F4AA20091970A /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FAB0DA2F2F9F4AA80091970A /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FAB0DA302F9F4AA90091970A /* ResourcesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
+		FAB0DA332F9F4AB20091970A /* EditStudentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditStudentView.swift; sourceTree = "<group>"; };
+		FAB0DA342F9F4AB20091970A /* StudentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsView.swift; sourceTree = "<group>"; };
+		FAB0DA482F9F511F0091970A /* ClassfaceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassfaceApp.swift; sourceTree = "<group>"; };
+		FAB0DA4A2F9F54280091970A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FAB0DA4B2F9F57BC0091970A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAB0D9AC2F9F462D0091970A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA5F0AE62F9FC07600D3E622 /* KRProgressHUD in Frameworks */,
+				FAB0DA442F9F4EA40091970A /* Kingfisher in Frameworks */,
+				FAB0DA3B2F9F4B6C0091970A /* FirebaseDatabaseSwift in Frameworks */,
+				FA5F0AE92F9FC60B00D3E622 /* AlertToast in Frameworks */,
+				FAB0DA472F9F4F660091970A /* HUD in Frameworks */,
+				C25711499C2086EC0C9B1F81 /* Pods_Classface.framework in Frameworks */,
+				FAB0DA392F9F4B6C0091970A /* FirebaseAuth in Frameworks */,
+				FAB0DA552F9F656F0091970A /* Toaster in Frameworks */,
+				FAB0DA3E2F9F4C140091970A /* GoogleSignInSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEE02747EB095DDBE108E26B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5ECD3BC8473550B33A0DF /* Pods-Classface.debug.xcconfig */,
+				C1D166655533941E8CB55610 /* Pods-Classface.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4359720D0BD95D05F8551E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77BABD6E9BEEB0B926D95A71 /* Pods_Classface.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAB0D9A62F9F462D0091970A = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9B12F9F462D0091970A /* Classface */,
+				FAB0D9B02F9F462D0091970A /* Products */,
+				BEE02747EB095DDBE108E26B /* Pods */,
+				F4359720D0BD95D05F8551E5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAB0D9B02F9F462D0091970A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9AF2F9F462D0091970A /* Classface.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAB0D9B12F9F462D0091970A /* Classface */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0DA4B2F9F57BC0091970A /* Launch Screen.storyboard */,
+				FAB0D9D52F9F49AC0091970A /* GoogleService-Info.plist */,
+				FAB0DA4A2F9F54280091970A /* Info.plist */,
+				FAB0DA482F9F511F0091970A /* ClassfaceApp.swift */,
+				FAB0D9C02F9F47800091970A /* Tensorflow */,
+				FAB0D9E82F9F49D40091970A /* Protocols */,
+				FAB0D9D72F9F49BF0091970A /* Models */,
+				FAB0D9CD2F9F48480091970A /* Utils */,
+				FAB0D9D02F9F48980091970A /* Views */,
+				FAB0D9B62F9F462F0091970A /* Assets.xcassets */,
+				FAB0D9B82F9F462F0091970A /* Preview Content */,
+			);
+			path = Classface;
+			sourceTree = "<group>";
+		};
+		FAB0D9B82F9F462F0091970A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9B92F9F462F0091970A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAB0D9C02F9F47800091970A /* Tensorflow */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9C12F9F478C0091970A /* Graph */,
+				FAB0D9C82F9F47AF0091970A /* FaceNet.swift */,
+				FAB0D9C72F9F47AE0091970A /* tensorflow_utils.h */,
+				FAB0D9C92F9F47B00091970A /* tensorflow_utils.mm */,
+				FAB0D9C62F9F47AD0091970A /* tfWrap.h */,
+				FAB0D9C52F9F47AC0091970A /* tfWrap.mm */,
+				FAB0D9C42F9F47AB0091970A /* Bridging-Header.h */,
+			);
+			path = Tensorflow;
+			sourceTree = "<group>";
+		};
+		FAB0D9C12F9F478C0091970A /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9C22F9F479C0091970A /* modelFacenet.pb */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		FAB0D9CD2F9F48480091970A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9CF2F9F487C0091970A /* ViewObservers */,
+				FAB0D9CE2F9F484F0091970A /* Extensions */,
+				FAB0DA032F9F4A120091970A /* CFFaceDetector.swift */,
+				FAB0DA002F9F4A100091970A /* Common.swift */,
+				FAB0DA042F9F4A130091970A /* FaceComparator.swift */,
+				FAB0DA022F9F4A120091970A /* NetworkMonitor.swift */,
+				FAB0DA052F9F4A140091970A /* ResourcesStore.swift */,
+				FAB0DA012F9F4A110091970A /* UserDefaultsHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FAB0D9CE2F9F484F0091970A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9D12F9F48CB0091970A /* CIImage+.swift */,
+				FAB0D9D32F9F48E80091970A /* UIImage+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAB0D9CF2F9F487C0091970A /* ViewObservers */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9ED2F9F49FC0091970A /* EditClassViewObserver.swift */,
+				FAB0D9EB2F9F49FA0091970A /* EditStudentViewObserver.swift */,
+				FAB0D9EE2F9F49FD0091970A /* HomeViewObserver.swift */,
+				FAB0D9EC2F9F49FB0091970A /* LogInViewObserver.swift */,
+				FAB0D9F42F9F4A010091970A /* MainTabViewObserver.swift */,
+				FAB0D9F32F9F4A000091970A /* NotificationsViewObserver.swift */,
+				FAB0D9F02F9F49FE0091970A /* ProfileViewObserver.swift */,
+				FAB0D9EF2F9F49FD0091970A /* RollCallSessionViewObserver.swift */,
+				FAB0D9F12F9F49FF0091970A /* SignUpViewObserver.swift */,
+				FAB0D9F22F9F49FF0091970A /* StudentsViewObserver.swift */,
+			);
+			path = ViewObservers;
+			sourceTree = "<group>";
+		};
+		FAB0D9D02F9F48980091970A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0DA0D2F9F4A380091970A /* Auth */,
+				FAB0DA0E2F9F4A3E0091970A /* Others */,
+				FAB0DA0F2F9F4A450091970A /* TabViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAB0D9D72F9F49BF0091970A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9D82F9F49CA0091970A /* CFClass.swift */,
+				FAB0D9DB2F9F49CC0091970A /* CFClassAndStudent.swift */,
+				FAB0D9D92F9F49CB0091970A /* CFNotification.swift */,
+				FAB0D9DA2F9F49CB0091970A /* CFNotificationAndUser.swift */,
+				FAB0D9DE2F9F49CE0091970A /* CFRollCallPhoto.swift */,
+				FAB0D9DF2F9F49CF0091970A /* CFRollCallSession.swift */,
+				FAB0D9DD2F9F49CE0091970A /* CFStudent.swift */,
+				FAB0D9DC2F9F49CD0091970A /* CFUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAB0D9E82F9F49D40091970A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0D9E92F9F49DD0091970A /* CFBase.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAB0DA0D2F9F4A380091970A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0DA112F9F4A5A0091970A /* ForgotPassView.swift */,
+				FAB0DA102F9F4A590091970A /* LogInView.swift */,
+				FAB0DA122F9F4A5B0091970A /* MainEntryView.swift */,
+				FAB0DA132F9F4A5B0091970A /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FAB0DA0E2F9F4A3E0091970A /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0DA182F9F4A650091970A /* CrashView.swift */,
+				FAB0DA192F9F4A660091970A /* TOSView.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		FAB0DA0F2F9F4A450091970A /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0DA2A2F9F4AA10091970A /* MainTabView.swift */,
+				FAB0DA292F9F4AA00091970A /* NotificationsView.swift */,
+				FAB0DA2B2F9F4AA20091970A /* ProfileView.swift */,
+				FAB0DA1C2F9F4A6D0091970A /* HomeView */,
+				FAB0DA1E2F9F4A7B0091970A /* StudentsView */,
+				FAB0DA1D2F9F4A740091970A /* SettingsView */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		FAB0DA1C2F9F4A6D0091970A /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0DA212F9F4A930091970A /* EditClassView.swift */,
+				FAB0DA222F9F4A940091970A /* HomeView.swift */,
+				FAB0DA202F9F4A930091970A /* RollCallSessionsView.swift */,
+				FAB0DA1F2F9F4A920091970A /* RollCallSessionView.swift */,
+				FAB0DA232F9F4A950091970A /* StudentsOfClassView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FAB0DA1D2F9F4A740091970A /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0DA302F9F4AA90091970A /* ResourcesView.swift */,
+				FAB0DA2F2F9F4AA80091970A /* SettingsView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		FAB0DA1E2F9F4A7B0091970A /* StudentsView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0DA332F9F4AB20091970A /* EditStudentView.swift */,
+				FAB0DA342F9F4AB20091970A /* StudentsView.swift */,
+			);
+			path = StudentsView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAB0D9AE2F9F462D0091970A /* Classface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB0D9BD2F9F462F0091970A /* Build configuration list for PBXNativeTarget "Classface" */;
+			buildPhases = (
+				77909A8F53A8E8D64E3F412B /* [CP] Check Pods Manifest.lock */,
+				FAB0D9AB2F9F462D0091970A /* Sources */,
+				FAB0D9AC2F9F462D0091970A /* Frameworks */,
+				FAB0D9AD2F9F462D0091970A /* Resources */,
+				6B24ED07050079BB4F8897B1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Classface;
+			packageProductDependencies = (
+				FAB0DA382F9F4B6C0091970A /* FirebaseAuth */,
+				FAB0DA3A2F9F4B6C0091970A /* FirebaseDatabaseSwift */,
+				FAB0DA3D2F9F4C140091970A /* GoogleSignInSwift */,
+				FAB0DA432F9F4EA40091970A /* Kingfisher */,
+				FAB0DA462F9F4F660091970A /* HUD */,
+				FAB0DA542F9F656F0091970A /* Toaster */,
+				FA5F0AE52F9FC07600D3E622 /* KRProgressHUD */,
+				FA5F0AE82F9FC60B00D3E622 /* AlertToast */,
+			);
+			productName = Classface;
+			productReference = FAB0D9AF2F9F462D0091970A /* Classface.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAB0D9A72F9F462D0091970A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					FAB0D9AE2F9F462D0091970A = {
+						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
+					};
+				};
+			};
+			buildConfigurationList = FAB0D9AA2F9F462D0091970A /* Build configuration list for PBXProject "Classface" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAB0D9A62F9F462D0091970A;
+			packageReferences = (
+				FAB0DA372F9F4B6C0091970A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FAB0DA3C2F9F4C140091970A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				FAB0DA422F9F4EA40091970A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				FAB0DA452F9F4F660091970A /* XCRemoteSwiftPackageReference "HUD" */,
+				FAB0DA532F9F656F0091970A /* XCRemoteSwiftPackageReference "Toaster" */,
+				FA5F0AE42F9FC07600D3E622 /* XCRemoteSwiftPackageReference "KRProgressHUD" */,
+				FA5F0AE72F9FC60B00D3E622 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
+			productRefGroup = FAB0D9B02F9F462D0091970A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAB0D9AE2F9F462D0091970A /* Classface */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAB0D9AD2F9F462D0091970A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB0D9C32F9F479C0091970A /* modelFacenet.pb in Resources */,
+				FAB0D9D62F9F49AC0091970A /* GoogleService-Info.plist in Resources */,
+				FAB0D9BA2F9F462F0091970A /* Preview Assets.xcassets in Resources */,
+				FAB0DA4C2F9F57BC0091970A /* Launch Screen.storyboard in Resources */,
+				FAB0D9B72F9F462F0091970A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B24ED07050079BB4F8897B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Classface/Pods-Classface-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Classface/Pods-Classface-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Classface/Pods-Classface-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77909A8F53A8E8D64E3F412B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Classface-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAB0D9AB2F9F462D0091970A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB0DA0C2F9F4A140091970A /* ResourcesStore.swift in Sources */,
+				FAB0DA1A2F9F4A660091970A /* CrashView.swift in Sources */,
+				FAB0DA152F9F4A5B0091970A /* ForgotPassView.swift in Sources */,
+				FAB0DA2E2F9F4AA20091970A /* ProfileView.swift in Sources */,
+				FAB0D9F92F9F4A010091970A /* RollCallSessionViewObserver.swift in Sources */,
+				FAB0DA262F9F4A950091970A /* EditClassView.swift in Sources */,
+				FAB0DA1B2F9F4A660091970A /* TOSView.swift in Sources */,
+				FAB0D9FC2F9F4A010091970A /* StudentsViewObserver.swift in Sources */,
+				FAB0DA312F9F4AA90091970A /* SettingsView.swift in Sources */,
+				FAB0D9FE2F9F4A010091970A /* MainTabViewObserver.swift in Sources */,
+				FAB0DA2D2F9F4AA20091970A /* MainTabView.swift in Sources */,
+				FAB0D9E52F9F49CF0091970A /* CFStudent.swift in Sources */,
+				FAB0D9E32F9F49CF0091970A /* CFClassAndStudent.swift in Sources */,
+				FAB0D9D42F9F48E80091970A /* UIImage+.swift in Sources */,
+				FAB0DA092F9F4A140091970A /* NetworkMonitor.swift in Sources */,
+				FAB0D9F82F9F4A010091970A /* HomeViewObserver.swift in Sources */,
+				FAB0DA162F9F4A5B0091970A /* MainEntryView.swift in Sources */,
+				FAB0DA272F9F4A950091970A /* HomeView.swift in Sources */,
+				FAB0DA0A2F9F4A140091970A /* CFFaceDetector.swift in Sources */,
+				FAB0DA242F9F4A950091970A /* RollCallSessionView.swift in Sources */,
+				FAB0DA172F9F4A5B0091970A /* SignUpView.swift in Sources */,
+				FAB0D9E12F9F49CF0091970A /* CFNotification.swift in Sources */,
+				FAB0DA322F9F4AA90091970A /* ResourcesView.swift in Sources */,
+				FAB0D9FD2F9F4A010091970A /* NotificationsViewObserver.swift in Sources */,
+				FAB0D9F62F9F4A010091970A /* LogInViewObserver.swift in Sources */,
+				FAB0DA252F9F4A950091970A /* RollCallSessionsView.swift in Sources */,
+				FAB0D9E22F9F49CF0091970A /* CFNotificationAndUser.swift in Sources */,
+				FAB0DA492F9F511F0091970A /* ClassfaceApp.swift in Sources */,
+				FAB0DA082F9F4A140091970A /* UserDefaultsHelper.swift in Sources */,
+				FAB0DA2C2F9F4AA20091970A /* NotificationsView.swift in Sources */,
+				FAB0D9CB2F9F47B00091970A /* FaceNet.swift in Sources */,
+				FAB0DA142F9F4A5B0091970A /* LogInView.swift in Sources */,
+				FAB0D9CC2F9F47B00091970A /* tensorflow_utils.mm in Sources */,
+				FAB0D9FA2F9F4A010091970A /* ProfileViewObserver.swift in Sources */,
+				FAB0D9CA2F9F47B00091970A /* tfWrap.mm in Sources */,
+				FAB0D9E72F9F49CF0091970A /* CFRollCallSession.swift in Sources */,
+				FAB0DA0B2F9F4A140091970A /* FaceComparator.swift in Sources */,
+				FAB0D9FB2F9F4A010091970A /* SignUpViewObserver.swift in Sources */,
+				FAB0DA072F9F4A140091970A /* Common.swift in Sources */,
+				FAB0D9EA2F9F49DD0091970A /* CFBase.swift in Sources */,
+				FAB0D9D22F9F48CB0091970A /* CIImage+.swift in Sources */,
+				FAB0D9E02F9F49CF0091970A /* CFClass.swift in Sources */,
+				FAB0D9F52F9F4A010091970A /* EditStudentViewObserver.swift in Sources */,
+				FAB0DA282F9F4A950091970A /* StudentsOfClassView.swift in Sources */,
+				FAB0DA352F9F4AB20091970A /* EditStudentView.swift in Sources */,
+				FAB0DA362F9F4AB20091970A /* StudentsView.swift in Sources */,
+				FAB0D9E62F9F49CF0091970A /* CFRollCallPhoto.swift in Sources */,
+				FAB0D9F72F9F4A010091970A /* EditClassViewObserver.swift in Sources */,
+				FAB0D9E42F9F49CF0091970A /* CFUser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FAB0D9BB2F9F462F0091970A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAB0D9BC2F9F462F0091970A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAB0D9BE2F9F462F0091970A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD5ECD3BC8473550B33A0DF /* Pods-Classface.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Classface/Preview Content\"";
+				DEVELOPMENT_TEAM = R3XPH5TX6F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Classface/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = soreninisngo.Classface;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Classface/Tensorflow/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAB0D9BF2F9F462F0091970A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1D166655533941E8CB55610 /* Pods-Classface.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Classface/Preview Content\"";
+				DEVELOPMENT_TEAM = R3XPH5TX6F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Classface/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = soreninisngo.Classface;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Classface/Tensorflow/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAB0D9AA2F9F462D0091970A /* Build configuration list for PBXProject "Classface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB0D9BB2F9F462F0091970A /* Debug */,
+				FAB0D9BC2F9F462F0091970A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB0D9BD2F9F462F0091970A /* Build configuration list for PBXNativeTarget "Classface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB0D9BE2F9F462F0091970A /* Debug */,
+				FAB0D9BF2F9F462F0091970A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA5F0AE42F9FC07600D3E622 /* XCRemoteSwiftPackageReference "KRProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krimpedance/KRProgressHUD.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.4.8;
+			};
+		};
+		FA5F0AE72F9FC60B00D3E622 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.3.9;
+			};
+		};
+		FAB0DA372F9F4B6C0091970A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
+		FAB0DA3C2F9F4C140091970A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 7.0.0;
+			};
+		};
+		FAB0DA422F9F4EA40091970A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.4.1;
+			};
+		};
+		FAB0DA452F9F4F660091970A /* XCRemoteSwiftPackageReference "HUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/winddpan/HUD.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FAB0DA532F9F656F0091970A /* XCRemoteSwiftPackageReference "Toaster" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bluesky335/Toaster";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA5F0AE52F9FC07600D3E622 /* KRProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5F0AE42F9FC07600D3E622 /* XCRemoteSwiftPackageReference "KRProgressHUD" */;
+			productName = KRProgressHUD;
+		};
+		FA5F0AE82F9FC60B00D3E622 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5F0AE72F9FC60B00D3E622 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+		FAB0DA382F9F4B6C0091970A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB0DA372F9F4B6C0091970A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FAB0DA3A2F9F4B6C0091970A /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB0DA372F9F4B6C0091970A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		FAB0DA3D2F9F4C140091970A /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB0DA3C2F9F4C140091970A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		FAB0DA432F9F4EA40091970A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB0DA422F9F4EA40091970A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		FAB0DA462F9F4F660091970A /* HUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB0DA452F9F4F660091970A /* XCRemoteSwiftPackageReference "HUD" */;
+			productName = HUD;
+		};
+		FAB0DA542F9F656F0091970A /* Toaster */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB0DA532F9F656F0091970A /* XCRemoteSwiftPackageReference "Toaster" */;
+			productName = Toaster;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FAB0D9A72F9F462D0091970A /* Project object */;
+}
