@@ -1,0 +1,20 @@
+PODS:
+  - FaceCropper (1.0.0)
+  - TensorFlow-experimental (1.1.1)
+
+DEPENDENCIES:
+  - FaceCropper
+  - TensorFlow-experimental
+
+SPEC REPOS:
+  trunk:
+    - FaceCropper
+    - TensorFlow-experimental
+
+SPEC CHECKSUMS:
+  FaceCropper: 5037221c279db6ae3cea68e76ac4165c85c7c291
+  TensorFlow-experimental: c38ed2a43acaa2d42ce4174ac076efaa76e26a12
+
+PODFILE CHECKSUM: 1bca20d10cf2b7982212f5f8f7661e361edfbde2
+
+COCOAPODS: 1.12.1
